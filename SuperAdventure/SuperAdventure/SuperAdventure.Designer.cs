@@ -93,7 +93,7 @@
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
-            this.lblExperience.Location = new System.Drawing.Point(170, 83);
+            this.lblExperience.Location = new System.Drawing.Point(195, 83);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.Size = new System.Drawing.Size(0, 37);
             this.lblExperience.TabIndex = 6;
