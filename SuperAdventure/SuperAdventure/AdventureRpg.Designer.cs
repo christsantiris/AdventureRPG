@@ -1,6 +1,6 @@
 ﻿namespace SuperAdventure
 {
-    partial class SuperAdventure
+    partial class AdventureRpg
     {
         /// <summary>
         /// Required designer variable.
@@ -263,7 +263,7 @@
             this.dgvQuests.Size = new System.Drawing.Size(400, 400);
             this.dgvQuests.TabIndex = 20;
             // 
-            // SuperAdventure
+            // AdventureRpg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,8 +289,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "SuperAdventure";
+            this.Name = "AdventureRpg";
             this.Text = "di";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdventureRpg_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
             this.ResumeLayout(false);
