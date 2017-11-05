@@ -124,7 +124,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(344, 180);
+            this.label5.Location = new System.Drawing.Point(718, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(199, 37);
             this.label5.TabIndex = 8;
@@ -133,17 +133,17 @@
             // cboWeapons
             // 
             this.cboWeapons.FormattingEnabled = true;
-            this.cboWeapons.Location = new System.Drawing.Point(25, 228);
+            this.cboWeapons.Location = new System.Drawing.Point(33, 200);
             this.cboWeapons.Name = "cboWeapons";
-            this.cboWeapons.Size = new System.Drawing.Size(121, 45);
+            this.cboWeapons.Size = new System.Drawing.Size(368, 45);
             this.cboWeapons.TabIndex = 9;
             // 
             // cboPotions
             // 
             this.cboPotions.FormattingEnabled = true;
-            this.cboPotions.Location = new System.Drawing.Point(25, 269);
+            this.cboPotions.Location = new System.Drawing.Point(33, 260);
             this.cboPotions.Name = "cboPotions";
-            this.cboPotions.Size = new System.Drawing.Size(121, 45);
+            this.cboPotions.Size = new System.Drawing.Size(368, 45);
             this.cboPotions.TabIndex = 10;
             // 
             // btnUseWeapon
@@ -210,22 +210,22 @@
             // rtbLocation
             // 
             this.rtbLocation.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtbLocation.Location = new System.Drawing.Point(25, 685);
+            this.rtbLocation.Location = new System.Drawing.Point(33, 709);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
             this.rtbLocation.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtbLocation.Size = new System.Drawing.Size(294, 278);
+            this.rtbLocation.Size = new System.Drawing.Size(430, 620);
             this.rtbLocation.TabIndex = 17;
             this.rtbLocation.Text = "";
             // 
             // rtbMessages
             // 
             this.rtbMessages.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rtbMessages.Location = new System.Drawing.Point(364, 685);
+            this.rtbMessages.Location = new System.Drawing.Point(487, 708);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
             this.rtbMessages.ShowSelectionMargin = true;
-            this.rtbMessages.Size = new System.Drawing.Size(273, 276);
+            this.rtbMessages.Size = new System.Drawing.Size(430, 620);
             this.rtbMessages.TabIndex = 18;
             this.rtbMessages.Text = "";
             // 
@@ -237,13 +237,13 @@
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvInventory.Enabled = false;
-            this.dgvInventory.Location = new System.Drawing.Point(755, 849);
+            this.dgvInventory.Location = new System.Drawing.Point(1048, 929);
             this.dgvInventory.MultiSelect = false;
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
             this.dgvInventory.RowHeadersVisible = false;
             this.dgvInventory.RowTemplate.Height = 46;
-            this.dgvInventory.Size = new System.Drawing.Size(386, 368);
+            this.dgvInventory.Size = new System.Drawing.Size(400, 400);
             this.dgvInventory.TabIndex = 19;
             // 
             // dgvQuests
@@ -254,20 +254,20 @@
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvQuests.Enabled = false;
-            this.dgvQuests.Location = new System.Drawing.Point(1211, 849);
+            this.dgvQuests.Location = new System.Drawing.Point(1642, 929);
             this.dgvQuests.MultiSelect = false;
             this.dgvQuests.Name = "dgvQuests";
             this.dgvQuests.ReadOnly = true;
             this.dgvQuests.RowHeadersVisible = false;
             this.dgvQuests.RowTemplate.Height = 46;
-            this.dgvQuests.Size = new System.Drawing.Size(384, 368);
+            this.dgvQuests.Size = new System.Drawing.Size(400, 400);
             this.dgvQuests.TabIndex = 20;
             // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1686, 1307);
+            this.ClientSize = new System.Drawing.Size(2169, 1967);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
