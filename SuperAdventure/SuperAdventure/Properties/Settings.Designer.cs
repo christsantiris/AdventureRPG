@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperAdventure.Properties
+namespace AdventureRpg.Properties
 {
 
 

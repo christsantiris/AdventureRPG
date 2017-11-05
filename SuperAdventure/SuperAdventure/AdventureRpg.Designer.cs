@@ -1,4 +1,4 @@
-﻿namespace SuperAdventure
+﻿namespace AdventureRpg
 {
     partial class AdventureRpg
     {
