@@ -236,7 +236,6 @@
             this.dgvInventory.AllowUserToResizeRows = false;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvInventory.Enabled = false;
             this.dgvInventory.Location = new System.Drawing.Point(1048, 929);
             this.dgvInventory.MultiSelect = false;
             this.dgvInventory.Name = "dgvInventory";
@@ -253,7 +252,6 @@
             this.dgvQuests.AllowUserToResizeRows = false;
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvQuests.Enabled = false;
             this.dgvQuests.Location = new System.Drawing.Point(1642, 929);
             this.dgvQuests.MultiSelect = false;
             this.dgvQuests.Name = "dgvQuests";
