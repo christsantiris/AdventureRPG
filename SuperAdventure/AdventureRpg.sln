@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureRpg", "SuperAdventure\AdventureRpg.csproj", "{724AF9F5-900D-4035-8F57-379C31680938}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureRpg", "AdventureRpg\AdventureRpg.csproj", "{724AF9F5-900D-4035-8F57-379C31680938}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{F2633B44-8041-4F96-BA03-20C081A072EC}"
 EndProject
