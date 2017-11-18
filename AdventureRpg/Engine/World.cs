@@ -107,7 +107,7 @@ namespace Engine
         private static void PopulateLocations()
         {
             // Create each location
-            Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. You really need to clean up the place.");
+            Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. You are bored, so you decide to go on a quest.");
 
             Location townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square", "You see a fountain.");
 
