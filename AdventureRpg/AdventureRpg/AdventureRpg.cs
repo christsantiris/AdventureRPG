@@ -425,7 +425,16 @@ namespace AdventureRpg
         {
             if (propertyChangedEventArgs.PropertyName == "Weapons")
             {
+                Weapon previouslySelectedWeapon = _player.CurrentWeapon;
+
                 cboWeapons.DataSource = _player.Weapons;
+
+                // Handle the possibility that the player does not have any weapons, or sold their weapon.
+                if (previouslySelectedWeapon != null &&
+                _player.Weapons.Exists(w => w.ID == previouslySelectedWeapon.ID))
+                {
+                    cboWeapons.SelectedItem = previouslySelectedWeapon;
+                }
 
                 if (!_player.Weapons.Any())
                 {
