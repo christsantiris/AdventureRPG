@@ -19,13 +19,16 @@ namespace Engine
         public const int ITEM_ID_SPIDER_FANG = 8;
         public const int ITEM_ID_SPIDER_SILK = 9;
         public const int ITEM_ID_ADVENTURER_PASS = 10;
+        public const int ITEM_ID_LONG_SWORD = 11;
 
         public const int MONSTER_ID_RAT = 1;
         public const int MONSTER_ID_SNAKE = 2;
         public const int MONSTER_ID_GIANT_SPIDER = 3;
+        public const int MONSTER_ID_TROLL = 4;
 
         public const int QUEST_ID_CLEAR_ALCHEMIST_GARDEN = 1;
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
+        public const int QUEST_ID_SLAY_THE_TROLL = 3;
 
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_TOWN_SQUARE = 2;
@@ -36,6 +39,7 @@ namespace Engine
         public const int LOCATION_ID_FARM_FIELD = 7;
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
+        public const int LOCATION_ID_TROLLS_CAVE = 10;
 
         static World()
         {
@@ -57,6 +61,7 @@ namespace Engine
             Items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs"));
             Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks"));
             Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes"));
+            Items.Add(new Weapon(ITEM_ID_LONG_SWORD, "Long Sword", "Long Swords", 0, 8));
         }
 
         private static void PopulateMonsters()
@@ -73,9 +78,13 @@ namespace Engine
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
 
+            Monster troll = new Monster(MONSTER_ID_TROLL, "Troll", 30, 10, 100, 15, 15);
+            troll.LootTable.Add(new LootItem(ItemByID(ITEM_ID_LONG_SWORD), 100, true));
+
             Monsters.Add(rat);
             Monsters.Add(snake);
             Monsters.Add(giantSpider);
+            Monsters.Add(troll);
         }
 
         private static void PopulateQuests()
@@ -100,8 +109,15 @@ namespace Engine
 
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
+            Quest slayTheTroll =
+                new Quest(
+                    QUEST_ID_SLAY_THE_TROLL,
+                    "Slay the troll",
+                    "Slay the troll who has been stealing from local merchants. You will receive a better sword.", 50, 50);
+
             Quests.Add(clearAlchemistGarden);
             Quests.Add(clearFarmersField);
+            Quests.Add(slayTheTroll);
         }
 
         private static void PopulateLocations()
@@ -130,6 +146,9 @@ namespace Engine
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
+            Location trollsCave = new Location(LOCATION_ID_TROLLS_CAVE, "Trolls Cave", "You see a dark cave.");
+            trollsCave.MonsterLivingHere = MonsterByID(MONSTER_ID_TROLL);
+
             // Link the locations together
             home.LocationToNorth = townSquare;
 
@@ -155,6 +174,9 @@ namespace Engine
             bridge.LocationToEast = spiderField;
 
             spiderField.LocationToWest = bridge;
+            spiderField.LocationToEast = trollsCave;
+
+            trollsCave.LocationToWest = spiderField;
 
             // Add the locations to the static list
             Locations.Add(home);
@@ -166,6 +188,7 @@ namespace Engine
             Locations.Add(farmersField);
             Locations.Add(bridge);
             Locations.Add(spiderField);
+            Locations.Add(trollsCave);
         }
 
         public static Item ItemByID(int id)
