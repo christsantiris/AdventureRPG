@@ -115,6 +115,10 @@ namespace Engine
                     "Slay the troll",
                     "Slay the troll who has been stealing from local merchants. You will receive a better sword.", 50, 50);
 
+            slayTheTroll.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_LONG_SWORD), 1));
+
+            slayTheTroll.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+
             Quests.Add(clearAlchemistGarden);
             Quests.Add(clearFarmersField);
             Quests.Add(slayTheTroll);
@@ -140,13 +144,14 @@ namespace Engine
             farmersField.MonsterLivingHere = MonsterByID(MONSTER_ID_SNAKE);
 
             Location guardPost = new Location(LOCATION_ID_GUARD_POST, "Guard post", "There is a large, tough-looking guard here.", ItemByID(ITEM_ID_ADVENTURER_PASS));
+            guardPost.QuestAvailableHere = QuestByID(QUEST_ID_SLAY_THE_TROLL);
 
             Location bridge = new Location(LOCATION_ID_BRIDGE, "Bridge", "A stone bridge crosses a wide river.");
 
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
-            Location trollsCave = new Location(LOCATION_ID_TROLLS_CAVE, "Trolls Cave", "You see a dark cave.");
+            Location trollsCave = new Location(LOCATION_ID_TROLLS_CAVE, "Trolls Cave", "You see a dark cave.", ItemByID(ITEM_ID_SPIDER_FANG));
             trollsCave.MonsterLivingHere = MonsterByID(MONSTER_ID_TROLL);
 
             // Link the locations together
