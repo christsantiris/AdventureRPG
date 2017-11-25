@@ -93,12 +93,7 @@ namespace Engine
         {
             InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToRemove.ID);
 
-            if (item == null)
-            {
-                // The item is not in the player's inventory, so ignore it.
-                // We might want to raise an error for this situation
-            }
-            else
+            if (item != null)
             {
                 // They have the item in their inventory, so decrease the quantity
                 item.Quantity -= quantity;
