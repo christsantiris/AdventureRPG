@@ -184,6 +184,8 @@ namespace AdventureRpg
 
             if (propertyChangedEventArgs.PropertyName == "CurrentLocation")
             {
+                //Show button if vendor exists at this location
+                btnTrade.Visible = (_player.CurrentLocation.VendorWorkingHere != null);
                 // Show/hide available movement buttons
                 btnNorth.Visible = (_player.CurrentLocation.LocationToNorth != null);
                 btnEast.Visible = (_player.CurrentLocation.LocationToEast != null);
@@ -213,6 +215,9 @@ namespace AdventureRpg
 
         private void btnTrade_Click(object sender, EventArgs e)
         {
+            TradingScreen tradingScreen = new TradingScreen(_player);
+            tradingScreen.StartPosition = FormStartPosition.CenterParent;
+            tradingScreen.ShowDialog(this);
         }
     }
 }

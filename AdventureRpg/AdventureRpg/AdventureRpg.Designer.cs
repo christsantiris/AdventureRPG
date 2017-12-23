@@ -267,7 +267,7 @@
             //
             this.btnTrade.Location = new System.Drawing.Point(493, 620);
             this.btnTrade.Name = "btnTrade";
-            this.btnTrade.Size = new System.Drawing.Size(75, 23);
+            this.btnTrade.Size = new System.Drawing.Size(145, 75);
             this.btnTrade.TabIndex = 21;
             this.btnTrade.Text = "Trade";
             this.btnTrade.UseVisualStyleBackColor = true;
