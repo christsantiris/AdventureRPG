@@ -210,5 +210,9 @@ namespace AdventureRpg
                 }
             }
         }
+
+        private void btnTrade_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
